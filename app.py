@@ -3,8 +3,8 @@ from supabase import create_client
 import time
 
 # Connect to Supabase (we'll add secrets later)
-SUPABASE_URL = st.secrets["SUPABASE_URL"]
-SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
+SUPABASE_URL = st.secrets.SUPABASE_URL  # Direct string access
+SUPABASE_KEY = st.secrets.SUPABASE_KEY
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Set up the app
